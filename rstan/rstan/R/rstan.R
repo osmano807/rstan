@@ -120,8 +120,6 @@ stan_model <- function(file,
       WIKI <- "https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started"
       warning(paste("C++ compiler not found on system. If absent, see\n", WIKI))
     }
-    else if (grepl("69", CXX, fixed = TRUE))
-      warning("You may need to launch Xcode once to accept its license")
   } else CXX <- "g++"
 
   model_cppname <- stanc_ret$model_cppname
